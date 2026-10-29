@@ -5,10 +5,10 @@ chezmoi manages the files and mise manages the tools. Frontend setup: zsh, git, 
 ## New machine
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-git clone https://github.com/byrchenko/dotfiles.git ~/projects/dotfiles
-~/.local/bin/chezmoi init --source ~/projects/dotfiles --apply
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply --source ~/projects/dotfiles byrchenko
 ```
+
+This installs chezmoi, clones this repo into `~/projects/dotfiles`, and applies it.
 
 You'll be asked for your git name and email (Enter keeps byrch / byrchenko@gmail.com) and your sudo password (for apt and chsh). Then open a new terminal.
 
