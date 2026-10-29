@@ -1,6 +1,6 @@
-{{- /* Asked once per machine on `chezmoi init`, then remembered in ~/.config/chezmoi/chezmoi.toml */ -}}
-{{- $name := promptStringOnce . "name" "Git user name" -}}
-{{- $email := promptStringOnce . "email" "Git email" -}}
+{{- /* Asked once per machine on `chezmoi init` (Enter keeps the default), then remembered in ~/.config/chezmoi/chezmoi.toml */ -}}
+{{- $name := promptStringOnce . "name" "Git user name" "byrch" -}}
+{{- $email := promptStringOnce . "email" "Git email" "byrchenko@gmail.com" -}}
 
 # Remember where this repo lives (e.g. ~/projects/dotfiles), so plain `chezmoi apply` finds it
 sourceDir = {{ .chezmoi.sourceDir | quote }}

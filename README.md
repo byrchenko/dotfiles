@@ -6,11 +6,11 @@ chezmoi manages the files and mise manages the tools. Frontend setup: zsh, git, 
 
 ```sh
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-git clone https://github.com/<github-user>/dotfiles.git ~/projects/dotfiles
+git clone git@github.com:byrchenko/dotfiles.git ~/projects/dotfiles   # needs this machine's SSH key on GitHub
 ~/.local/bin/chezmoi init --source ~/projects/dotfiles --apply
 ```
 
-You'll be asked for your git name and email and your sudo password (for apt and chsh). Then open a new terminal.
+You'll be asked for your git name and email (Enter keeps byrch / byrchenko@gmail.com) and your sudo password (for apt and chsh). Then open a new terminal.
 
 ## Day to day
 
