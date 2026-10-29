@@ -2,6 +2,9 @@
 {{- $name := promptStringOnce . "name" "Git user name" -}}
 {{- $email := promptStringOnce . "email" "Git email" -}}
 
+# Remember where this repo lives (e.g. ~/projects/dotfiles), so plain `chezmoi apply` finds it
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}

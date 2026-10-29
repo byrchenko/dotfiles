@@ -5,7 +5,9 @@ chezmoi manages the files and mise manages the tools. Frontend setup: zsh, git, 
 ## New machine
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply <github-user>
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+git clone https://github.com/<github-user>/dotfiles.git ~/projects/dotfiles
+~/.local/bin/chezmoi init --source ~/projects/dotfiles --apply
 ```
 
 You'll be asked for your git name and email and your sudo password (for apt and chsh). Then open a new terminal.
@@ -19,7 +21,7 @@ You'll be asked for your git name and email and your sudo password (for apt and 
 | Start tracking a file | `chezmoi add ~/.config/whatever` |
 | Pin node for a project | `mise use node@22` in the project (or keep its `.nvmrc`) |
 | Pull changes on another machine | `chezmoi update` |
-| Save changes | `chezmoi cd && git add -A && git commit -m "..." && git push` |
+| Save changes | `cd ~/projects/dotfiles && git add -A && git commit -m "..." && git push` |
 
 ## Layout
 
