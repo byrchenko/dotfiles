@@ -6,7 +6,7 @@ chezmoi manages the files and mise manages the tools. Frontend setup: zsh, git, 
 
 ```sh
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-git clone git@github.com:byrchenko/dotfiles.git ~/projects/dotfiles   # needs this machine's SSH key on GitHub
+git clone https://github.com/byrchenko/dotfiles.git ~/projects/dotfiles
 ~/.local/bin/chezmoi init --source ~/projects/dotfiles --apply
 ```
 
