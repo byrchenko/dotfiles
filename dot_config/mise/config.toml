@@ -1,0 +1,23 @@
+# Global tools for every machine. Edit, then `chezmoi apply` (runs `mise install`).
+# Per-project versions go in the project's own mise.toml / .nvmrc / .node-version.
+
+[tools]
+# Frontend runtime + package managers (replaces nvm)
+node = "lts"
+pnpm = "latest"
+
+# CLI essentials
+gh = "latest"
+lazygit = "latest"
+ripgrep = "latest"
+fd = "latest"
+fzf = "latest"
+bat = "latest"
+eza = "latest"
+jq = "latest"
+zoxide = "latest"
+starship = "latest"
+
+[settings]
+# Respect .nvmrc / .node-version files in projects, like nvm did
+idiomatic_version_file_enable_tools = ["node"]
